@@ -23,9 +23,8 @@
 
 
     <div class='item-container'>
-    <div class='item-container-header'>Updates</div>
-	09/21 First release
-         <div class='item-container-content'>
+    
+	  <div class='item-container-content'>
           <div class='item-container-footer'>
   
             </div>
@@ -192,10 +191,12 @@ Your weather provider choice:
     <div class='item-container-footer'>
       Starts at 10am - Ends at 10pm
     </div>
-    <label class='item'>
+    <div style="display:none;">
+	<label class='item'>
       White icons
       <input type='checkbox' class='item-toggle'  input id='toggle_bw_icons'>
-    </label>
+    </div>
+	</label>
   <div class='item-container-footer'>
     Only applies to Pebble Time.
   </div>
@@ -333,16 +334,18 @@ By default, the hours are not mid-centered
 
 
 <div class='item-container'>
-  <div class='item-container-header'>Main screen (Does not apply to OG Pebble)</div>
+  <div class='item-container-header'>Main screen (Does not apply to B&W Pebbles)</div>
   <div class='item-container-content'>
      <label class='item'>
       Temperatures - Background color
       <input type='text' class='item-color item-color-normal' input id='color_left_back' value='0x000000'>
     </label>
-    <label class='item'>
+     <div style="display:none;">
+	<label class='item'>
       Temperatures color
       <input type='text' class='item-color item-color-normal' input id='color_temperatures' value='0xFFFFFF'>
     </label>
+	  </div>
      <label class='item'>
       Hours - Background color
       <input type='text' class='item-color item-color-normal' input id='color_right_back' value='0x000000'>
@@ -368,7 +371,7 @@ By default, the hours are not mid-centered
 
  <div style="display:none;">
 <div class='item-container'>
-  <div class='item-container-header'>Second screen (Does not apply to OG Pebble)</div>
+  <div class='item-container-header'>Second screen (Does not apply to B&W Pebbles)</div>
   <div class='item-container-content'>
     <label class='item'>
       Background color
@@ -380,13 +383,6 @@ By default, the hours are not mid-centered
     </label>
     </div>
 </div>
-</div>
-<div class='item-container-footer'>
-		LAST NEWS<br>
-		(24th of july)<br>
-		- The second screen is removed <br>		
-		
-	
 </div>
 
 
