@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-  <title>Ruler Weather</title>
+  <title>Impact</title>
   <link rel='stylesheet' type='text/css' href='css/slate.min.css'>
   <script src='js/slate.min.js'></script>
   <style>
@@ -19,16 +19,15 @@
   </head>
 
   <body>
-    <h1 class='title'>Ruler Weather</h1>
+    <h1 class='title'>Impact</h1>
 
 
     <div class='item-container'>
     <div class='item-container-header'>Updates</div>
+	09/21 First release
          <div class='item-container-content'>
           <div class='item-container-footer'>
-                 New update : 20h of jully (Check for v 6.24)<br>
-		Check bellow what is new !
-           
+  
             </div>
             </div>
   <div class='item-container-header'>Position</div>
@@ -121,12 +120,10 @@ Your weather provider choice:
   </div>
 </div>
 
-
+ <div style="display:none;">
 <div class='item-container'>
   <div class='item-container-header'>Health</div>
   <div class='item-container-content'>
-
-
           <label class='item'>
        Your daily step goal:
       <select input id='select_goal' dir='rtl' class='item-select'>
@@ -164,6 +161,7 @@ Your weather provider choice:
 
   </div>
   </div>
+  </div>
 
 <div class='item-container'>
   <div class='item-container-header'>Others</div>
@@ -177,11 +175,11 @@ Your weather provider choice:
             <option class='item-select-option'>2</option>
       </select>
     </label>
-    
+     <div style="display:none;">
     <div class='item-container-footer'>
       0: Squared fonts - 1: Clearview fonts - 2: Leco fonts 
     </div>
-    
+    </div>
       <label class='item'>
     Bluetooth disconnection vibration 
       <input type='checkbox' class='item-toggle' input id='toggle_bt'>
@@ -201,13 +199,17 @@ Your weather provider choice:
   <div class='item-container-footer'>
     Only applies to Pebble Time.
   </div>
-      <label class='item'>
+ <div style="display:none;">   
+   <label class='item'>
     Gradiant
       <input type='checkbox' class='item-toggle'  input id='toggle_gradiant'>
     </label>
   <div class='item-container-footer'>
    Does not apply to Pebble round
   </div>
+  
+   
+    
     <label class='item'>
       Larger ruler
       <input type='checkbox' class='item-toggle'  input id='toggle_ruler_large' checked>
@@ -232,7 +234,7 @@ By default, the hours are not mid-centered
       <div class='item-container-footer'>
    By default the ruler is not inversed
   </div>
-
+  </div>
 
 
       <label class='item'>
@@ -305,12 +307,12 @@ By default, the hours are not mid-centered
 
 
  <label class='item'>
-      Battery at 100% vibration
+      Phone battery at 100% vibration
       <input type='checkbox' class='item-toggle'  input id='toggle_100' >
     </label>
 
  <label class='item'>
-      Battery < 20% or > 80% vibration
+      Phone battery < 20% or > 80% vibration
       <input type='checkbox' class='item-toggle'  input id='toggle_80' >
     </label>
 	
@@ -345,11 +347,13 @@ By default, the hours are not mid-centered
       Hours - Background color
       <input type='text' class='item-color item-color-normal' input id='color_right_back' value='0x000000'>
     </label>
-    <label class='item'>
+     <div style="display:none;">
+	<label class='item'>
       Hours color
       <input type='text' class='item-color item-color-normal' input id='color_hours' value='0xFFFFFF'>
     </label>
-    <label class='item'>
+   
+   <label class='item'>
       Ruler color
       <input type='text' class='item-color item-color-normal' input id='color_ruler' value='0xFFFFFF'>
     </label>
@@ -358,6 +362,7 @@ By default, the hours are not mid-centered
       Central line color
     <input type='text' class='item-color item-color-normal' input id='color_line' value='0xFFFFFF'>
     </label>
+	 </div> 
   </div>
 </div>
 
@@ -391,8 +396,7 @@ By default, the hours are not mid-centered
       </div>
     </div>
           
-      <Img src="explain.png"  style="width:300px;height:133px;">
-      <Img src="explain2.png"  style="width:300px;height:133px;">
+         <Img src="explain2.png"  style="width:300px;height:133px;">
       
                       
         
