@@ -1,8 +1,8 @@
 // force la météo sur l'émulateur
 var m_b_Debug=false;
 
-var myAPIKey = 'ae461f943802d620eafda5d9d3c98f91';
-var myGoogleAPIKey = 'AIzaSyCUb2MViPLL9TPJA1z5hpXwV6MGnHQ3YbI';
+var myAPIKey = ' ';
+var myGoogleAPIKey = ' ';
 var phone_bat=100;
 
 
