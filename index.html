@@ -373,7 +373,7 @@
 <div class='item-container'>
   <div class='item-container-header'>iopool API (Option)</div>
   <div class='item-container-content'>
-      Your io-pool token : (A warning is displayed instead of the weather icon if your pool has a chlorine level that is too low or a pH level that is too low.)
+      Your io-pool token :
       <label class='item'>
         <div class='item-input-wrapper'>
           <input type='text' class='item-input' input id='input_iopool_token' placeholder='Input field'>
@@ -381,7 +381,7 @@
       </label>
   </div>
 </div>
-   
+
 
   <div style="display:none;">
     <div class='item-container'>
@@ -416,6 +416,12 @@
 
   </div>
 
+     <script>
+    (function () {
+      var input_iopool_token = document.getElementById('input_iopool_token');
+      input_iopool_token.value = localStorage['input_iopool_token'] || '';
+    })();
+  </script>
 
 </body>
 
