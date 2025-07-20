@@ -334,7 +334,6 @@
   </div>
 
 
-
   <div class='item-container'>
     <div class='item-container-header'>Background color</div>
     <div class='item-container-content'>
@@ -371,6 +370,19 @@
     </div>
   </div>
 
+<div class='item-container'>
+  <div class='item-container-header'>iopool API (Option)</div>
+  <div class='item-container-content'>
+      Your io-pool token : (A warning is displayed instead of the weather icon if your pool has a chlorine level that is too low or a pH level that is too low.)
+      <label class='item'>
+        <div class='item-input-wrapper'>
+          <input type='text' class='item-input' input id='input_iopool_token' placeholder='Input field'>
+        </div>
+      </label>
+  </div>
+</div>
+   
+
   <div style="display:none;">
     <div class='item-container'>
       <div class='item-container-header'>Second screen (Does not apply to B&W Pebbles)</div>
@@ -396,8 +408,6 @@
 
   
 
-
-
   </label>
   <div class='item-container-footer'>
     If you REALLY like this app <br>
@@ -416,6 +426,7 @@
 
     var gps = document.getElementById('gps');
     var input_city = document.getElementById('input_city');
+	var input_iopool_token = document.getElementById('input_iopool_token');
     var input_api = document.getElementById('input_api');
     var select_utc = document.getElementById('select_utc');
     var select_goal = document.getElementById('select_goal');
@@ -452,6 +463,7 @@
     var options = {
       'gps': gps.checked,
       'input_city': input_city.value,
+	  'input_iopool_token': input_iopool_token.value,
       'input_api': input_api.value,
       'select_utc': select_utc.value,
       'select_goal': select_goal.value,
@@ -490,6 +502,7 @@
     // Save for next launch
     localStorage['gps'] = options['gps'];
     localStorage['input_city'] = options['input_city'];
+	localStorage['input_iopool_token'] = options['input_iopool_token'];
     localStorage['input_api'] = options['input_api'];
     localStorage['select_utc'] = options['select_utc'];
     localStorage['select_goal'] = options['select_goal'];
@@ -546,6 +559,7 @@
   (function () {
     var gps = document.getElementById('gps');
     var input_city = document.getElementById('input_city');
+	var input_iopool_token = document.getElementById('input_iopool_token');
     var input_api = document.getElementById('input_api');
     var select_utc = document.getElementById('select_utc');
     var select_goal = document.getElementById('select_goal');
@@ -576,6 +590,7 @@
     var toggle_month = document.getElementById('toggle_month');
     gps.checked = JSON.parse(localStorage['gps']);
     input_city.value = localStorage['input_city'];
+	input_iopool_token.value = localStorage['input_iopool_token'];
     input_api.value = localStorage['input_api'];
     select_utc.value = JSON.parse(localStorage['select_utc']);
     select_goal.value = JSON.parse(localStorage['select_goal']);
