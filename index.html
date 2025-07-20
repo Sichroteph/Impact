@@ -416,12 +416,6 @@
 
   </div>
 
-     <script>
-    (function () {
-      var input_iopool_token = document.getElementById('input_iopool_token');
-      input_iopool_token.value = localStorage['input_iopool_token'] || '';
-    })();
-  </script>
 
 </body>
 
@@ -433,6 +427,8 @@
     var gps = document.getElementById('gps');
     var input_city = document.getElementById('input_city');
 	var input_iopool_token = document.getElementById('input_iopool_token');
+	input_iopool_token.value = localStorage['input_iopool_token'] || '';
+	
     var input_api = document.getElementById('input_api');
     var select_utc = document.getElementById('select_utc');
     var select_goal = document.getElementById('select_goal');
