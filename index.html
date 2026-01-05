@@ -60,13 +60,13 @@
       <div class='item-container-footer'>
         Only applies to Pebble Time.
       </div>
-      <!-- Ajout de l'option panneau secondaire -->
+      <!-- Option graphique météo -->
       <label class='item'>
-        Show second panel
-        <input type='checkbox' class='item-toggle' input id='show_second_panel'>
+        Show weather graph
+        <input type='checkbox' class='item-toggle' input id='show_weather'>
       </label>
       <div class='item-container-footer'>
-        Enabled by default. Uncheck to hide the second panel.
+        Enabled by default. Uncheck to hide the weather graph.
       </div>
     </div>
   </div>
@@ -135,7 +135,7 @@
     var toggle_bt = document.getElementById('toggle_bt');
     var color_right_back = document.getElementById('color_right_back');
     var color_left_back = document.getElementById('color_left_back');
-    var show_second_panel = document.getElementById('show_second_panel');
+    var show_weather = document.getElementById('show_weather');
 
     var options = {
       'input_iopool_token': input_iopool_token.value,
@@ -145,7 +145,7 @@
       'toggle_bt': toggle_bt.checked,
       'color_right_back': color_right_back.value,
       'color_left_back': color_left_back.value,
-      'show_second_panel': show_second_panel.checked
+      'show_weather': show_weather.checked
     };
 
     // Save for next launch
@@ -156,7 +156,7 @@
     localStorage['toggle_bt'] = options['toggle_bt'];
     localStorage['color_right_back'] = options['color_right_back'];
     localStorage['color_left_back'] = options['color_left_back'];
-    localStorage['show_second_panel'] = options['show_second_panel'];
+    localStorage['show_weather'] = options['show_weather'];
     
     console.log('Got options: ' + JSON.stringify(options));
     return options;
@@ -191,7 +191,7 @@
     var toggle_bt = document.getElementById('toggle_bt');
     var color_right_back = document.getElementById('color_right_back');
     var color_left_back = document.getElementById('color_left_back');
-    var show_second_panel = document.getElementById('show_second_panel');
+    var show_weather = document.getElementById('show_weather');
     
     input_iopool_token.value = localStorage['input_iopool_token'] || '';
     radio_units.checked = JSON.parse(localStorage['radio_units'] || 'false');
@@ -200,7 +200,7 @@
     toggle_bt.checked = JSON.parse(localStorage['toggle_bt'] || 'false');
     color_right_back.value = localStorage['color_right_back'] || '0x000000';
     color_left_back.value = localStorage['color_left_back'] || '0x000000';
-    show_second_panel.checked = (localStorage['show_second_panel'] === undefined) ? true : JSON.parse(localStorage['show_second_panel']);
+    show_weather.checked = (localStorage['show_weather'] === undefined) ? true : JSON.parse(localStorage['show_weather']);
   })();
 </script>
 
